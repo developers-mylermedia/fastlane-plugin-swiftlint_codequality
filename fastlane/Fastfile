@@ -1,3 +1,13 @@
 lane :test do
-  swiftlint_codequality
+  swiftlint(
+    mode: :lint,
+    config_file: ".swiftlint-ci.yml",
+    output_file: "swiftlint.result.txt",
+    ignore_exit_status: true
+  )
+
+  swiftlint_codequality(
+  	path: 'swiftlint.result.txt', 
+  	output: 'swiftlint.report.txt'
+  )
 end

@@ -1,4 +1,4 @@
-# swiftlint_codequality plugin
+# SwiftLint to GitLab Code Quality plugin
 
 [![fastlane Plugin Badge](https://rawcdn.githack.com/fastlane/fastlane/master/fastlane/assets/plugin-badge.svg)](https://rubygems.org/gems/fastlane-plugin-swiftlint_codequality)
 
@@ -12,9 +12,7 @@ fastlane add_plugin swiftlint_codequality
 
 ## About swiftlint_codequality
 
-provides support for uploading SwiftLint reports to GitLab codequality
-
-**Note to author:** Add a more detailed description about this plugin here. If your plugin contains multiple actions, make sure to mention them here.
+Converts SwiftLint reports into GitLab support CodeQuality reports
 
 ## Example
 
