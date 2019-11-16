@@ -1,0 +1,1 @@
+/Users/apple/projects/Project/File.swift:20:5: error: Identifier Name Violation: Variable name should be between 3 and 40 characters long: 'p' (identifier_name)

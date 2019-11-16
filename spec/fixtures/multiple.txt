@@ -1,0 +1,8 @@
+/Users/apple/projects/Project/File.swift:20:5: error: Identifier Name Violation: Variable name should be between 3 and 40 characters long: 'p' (identifier_name)
+/Users/apple/projects/Project/File.swift:21:5: warning: Identifier Name Violation: Variable name should be between 3 and 40 characters long: 'p' (identifier_name)
+/Users/apple/projects/Project/File.swift:22:5: error: Identifier Name Violation: Variable name should be between 3 and 40 characters long: 'p' (identifier_name)
+/Users/apple/projects/Project/File.swift:23:5: error: Identifier Name Violation: Variable name should be between 3 and 40 characters long: 'p' (identifier_name)
+/Users/apple/projects/Project/File.swift:24:5: warning: Identifier Name Violation: Variable name should be between 3 and 40 characters long: 'p' (identifier_name)
+/Users/apple/projects/Project/File.swift:25:5: error: Identifier Name Violation: Variable name should be between 3 and 40 characters long: 'p' (identifier_name)
+/Users/apple/projects/Project/File.swift:26:5: todo: Identifier Name Violation: Variable name should be between 3 and 40 characters long: 'p' (identifier_name)
+/Users/apple/projects/Project/File.swift:27:5: random: Identifier Name Violation: Variable name should be between 3 and 40 characters long: 'p' (identifier_name)

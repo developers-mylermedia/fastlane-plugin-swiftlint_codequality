@@ -7,7 +7,7 @@ lane :test do
   )
 
   swiftlint_codequality(
-  	path: 'swiftlint.result.txt', 
-  	output: 'swiftlint.report.txt'
+    path: 'swiftlint.result.txt',
+    output: 'swiftlint.report.txt'
   )
 end

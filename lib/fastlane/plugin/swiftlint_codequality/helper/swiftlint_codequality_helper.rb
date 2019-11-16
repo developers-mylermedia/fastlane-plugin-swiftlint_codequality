@@ -5,7 +5,6 @@ module Fastlane
 
   module Helper
     class SwiftlintCodequalityHelper
-      
     end
   end
 end
