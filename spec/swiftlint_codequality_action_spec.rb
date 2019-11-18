@@ -107,4 +107,18 @@ describe Fastlane::Actions::SwiftlintCodequalityAction do
       Fastlane::Actions::SwiftlintCodequalityAction.run(path: path, output: output, prefix: '', fail_build_conditions: conditions)
     end
   end
+
+  describe 'swiftlint_codequality' do
+    it 'default use case' do
+      path = fixtures_path + "/empty.txt"
+      output = fixtures_path + "/empty.result.json"
+
+      Fastlane::FastFile.new.parse("lane :test do
+        swiftlint_codequality(path: '#{path}', output: '#{output}')
+      end").runner.execute(:test)
+
+      result = File.read(output)
+      expect(result).to eq("[]")
+    end
+  end
 end

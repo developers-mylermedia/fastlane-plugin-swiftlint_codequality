@@ -116,7 +116,7 @@ module Fastlane
                                       type: String),
           FastlaneCore::ConfigItem.new(key: :fail_build_conditions,
                                   env_name: "SWIFTLINT_CODEQUALITY_FAIL_BUILD_CONDITIONS",
-                               description: "A hash with severities and their limits, that if exceeded should result in an exception. Supported severities: critical, minor and info.",
+                               description: "A hash with severities and their limits, that if exceeded should result in an exception. Supported severities: critical, minor and info",
                                  is_string: false,
                              default_value: {},
                                   optional: true)
