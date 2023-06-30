@@ -19,8 +19,6 @@ module Fastlane
         IO.write(params[:output], result.to_json)
 
         UI.success("🚀 Generated Code Quality report at #{params[:output]} 🚀")
-
-        handle_result(result, params[:fail_build_conditions])
       end
 
       def self.line_to_code_climate_object(line, prefix, pwd)
@@ -59,35 +57,6 @@ module Fastlane
         }
       end
 
-      def self.handle_result(result, fail_build_conditions)
-        critical_limit = fail_build_conditions.fetch(Severity::CRITICAL.to_sym, 0)
-        minor_limit = fail_build_conditions.fetch(Severity::MINOR.to_sym, 0)
-        info_limit = fail_build_conditions.fetch(Severity::INFO.to_sym, 0)
-
-        critical_count = result.select { |issue| issue[:severity] == Severity::CRITICAL }.length
-        minor_count = result.select { |issue| issue[:severity] == Severity::MINOR }.length
-        info_count = result.select { |issue| issue[:severity] == Severity::INFO }.length
-
-        UI.important("")
-        violations = false
-        if critical_count > critical_limit
-          UI.important("Critical issue limit (#{critical_limit}) exceeded: #{critical_count}")
-          violations = true
-        end
-        if minor_count > minor_limit
-          UI.important("Minor issue limit (#{minor_limit}) exceeded: #{minor_count}")
-          violations = true
-        end
-        if info_count > info_limit
-          UI.important("Info issue limit (#{info_limit}) exceeded: #{info_count}")
-          violations = true
-        end
-
-        UI.important("")
-
-        UI.user_error!("Severity limits where exceeded.") if violations
-      end
-
       def self.description
         "Converts SwiftLint reports into GitLab support CodeQuality reports"
       end
@@ -117,13 +86,7 @@ module Fastlane
                                description: "Used to prefix the path of a file. Usefull in e.g. React Native projects where the iOS project is in a subfolder",
                                   optional: true,
                              default_value: '',
-                                      type: String),
-          FastlaneCore::ConfigItem.new(key: :fail_build_conditions,
-                                  env_name: "SWIFTLINT_CODEQUALITY_FAIL_BUILD_CONDITIONS",
-                               description: "A hash with severities and their limits, that if exceeded should result in an exception. Supported severities: critical, minor and info",
-                                 is_string: false,
-                             default_value: {},
-                                  optional: true)
+                                      type: String)
         ]
       end
 
