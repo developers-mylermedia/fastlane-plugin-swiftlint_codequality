@@ -24,7 +24,11 @@ module Fastlane
       end
 
       def self.line_to_code_climate_object(line, prefix, pwd)
-        filename, start, reason = line.match(/(.*\.swift):(\d+):\d+:\s*(.*)/).captures
+        lintedLine = line.match(/(.*\.swift):(\d+):\d+:\s*(.*)/)
+        if lintedLine.nil?
+          return
+        end
+        filename, start, reason = lintedLine.captures
 
         # example: error: Type Name Violation: Type name should only contain alphanumeric characters: 'FILE' (type_name)
 
