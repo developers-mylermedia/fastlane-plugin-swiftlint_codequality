@@ -5,7 +5,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'fastlane/plugin/swiftlint_codequality/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = 'fastlane-plugin-swiftlint_codequality-myler'
+  spec.name          = 'fastlane-plugin-swiftlint_codequality'
   spec.version       = Fastlane::SwiftlintCodequality::VERSION
   spec.author        = 'Mads Bøgeskov'
   spec.email         = 'mbg@danskebank.dk'
