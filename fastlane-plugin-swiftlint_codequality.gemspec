@@ -5,13 +5,13 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'fastlane/plugin/swiftlint_codequality/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = 'fastlane-plugin-swiftlint_codequality'
+  spec.name          = 'fastlane-plugin-swiftlint_codequality-myler'
   spec.version       = Fastlane::SwiftlintCodequality::VERSION
   spec.author        = 'Mads Bøgeskov'
   spec.email         = 'mbg@danskebank.dk'
 
   spec.summary       = 'Converts SwiftLint reports into GitLab support CodeQuality reports'
-  spec.homepage      = "https://github.com/madsbogeskov/fastlane-plugin-swiftlint_codequality"
+  spec.homepage      = "https://github.com/developers-mylermedia/fastlane-plugin-swiftlint_codequality"
   spec.license       = "MIT"
 
   spec.files         = Dir["lib/**/*"] + %w(README.md LICENSE)
